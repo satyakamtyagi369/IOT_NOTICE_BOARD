@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Notice Board</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IoT-Based Web Controlled Notice Board</h1>
+
+        <div class="iot-components">
+            <div class="component">
+                <h2>PIC Microcontroller</h2>
+                <img src="https://www.google.com/imgres?q=PIC%20microcontroller%20clear%20png%20images&imgurl=https%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F6%2FMicrocontroller-Chip-PNG-HD-Image.png&imgrefurl=https%3A%2F%2Fwww.pngall.com%2Fmicrocontroller-png%2F&docid=KZa4lnz5teFZGM&tbnid=EErCdoCVCFtb8M&vet=12ahUKEwj83IPlh6eJAxVFUGcHHTCzHsoQM3oECCEQAA..i&w=799&h=600&hcb=2&ved=2ahUKEwj83IPlh6eJAxVFUGcHHTCzHsoQM3oECCEQAA" alt="PIC Microcontroller">
+                <p>Status: <span id="pic-status">Connected</span></p>
+            </div>
+
+            <div class="component">
+                <h2>Wi-Fi Module</h2>
+                <img src="https://via.placeholder.com/150" alt="Wi-Fi Module">
+                <p>Status: <span id="wifi-status">Connected</span></p>
+            </div>
+
+            <div class="component">
+                <h2>LED Matrix</h2>
+                <div id="led-matrix" class="led-matrix">
+                    <!-- This will show the message sent -->
+                    <span id="display-message">No message</span>
+                </div>
+            </div>
+        </div>
+
+        <form id="messageForm" method="POST" action="/send-message">
+            <label for="message">Enter your message:</label>
+            <input type="text" id="message" name="message" required>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
